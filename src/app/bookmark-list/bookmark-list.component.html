@@ -1,0 +1,31 @@
+<!-- 
+<ul class="items">
+  <li *ngFor="let bookmark of bookmarks" [class.selected]="isSelected(bookmark)" (click)="onSelect(bookmark)">
+    <span class="badge">{{bookmark.id}}</span> {{bookmark.name}}
+  </li>
+</ul>
+-->
+<div class="reglist">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>URL</th>          
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let registration of registrations; let i = index"> -->
+        <tr *ngFor="let bookmark of bookmarks" [class.selected]="isSelected(bookmark)" (click)="onSelect(bookmark)">
+          <th>{{bookmark.id}}</th>
+          <td>{{bookmark.name}}</td>
+          <td>{{bookmark.link}}</td>
+          <td><button type="button" class="btn btn-info">Edit</button></td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+       
+  </div>
